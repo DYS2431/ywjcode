@@ -1,0 +1,10 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <view class="register-form">
+    <text class="title">用户注册</text>
+    <input class="input" type="text" placeholder="请输入用户名" bindinput="onUsernameInput"></input>
+    <input class="input" type="password" placeholder="请输入密码" bindinput="onPasswordInput"></input>
+    <button class="button" bindtap="register">注册</button>
+    <text class="login-tip" bindtap="navigateToLogin">已有账号？立即登录</text>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/database/database.wxml-->
+<view class="container">
+  <text class="title">数据库管理</text>
+  
+  <view class="upload-form">
+    <text class="form-title">上传实验内容</text>
+    <input class="form-input" type="text" placeholder="实验名称" bindinput="onNameInput"></input>
+    <input class="form-input" type="text" placeholder="实验分类" bindinput="onCategoryInput"></input>
+    <textarea class="form-textarea" placeholder="操作步骤" bindinput="onStepsInput"></textarea>
+    <textarea class="form-textarea" placeholder="实验材料（用逗号分隔）" bindinput="onMaterialsInput"></textarea>
+    <button class="form-button" bindtap="uploadExperiment">上传实验</button>
+  </view>
+
+  <view class="experiment-list">
+    <text class="list-title">实验列表</text>
+    <view class="experiment-item" wx:for="{{experimentList}}" wx:key="id">
+      <view class="experiment-info">
+        <text class="experiment-name">{{item.name}}</text>
+        <text class="experiment-category">{{item.category}}</text>
+      </view>
+      <button bindtap="deleteExperiment" data-id="{{item._id}}">删除</button>
+    </view>
+  </view>
+</view>
