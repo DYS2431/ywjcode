@@ -1,0 +1,9 @@
+<!--pages/vr/vr.wxml-->
+<view class="container">
+  <text class="title">VR 功能页面</text>
+  <view class="vr-content">
+    <text>这里是 VR 功能的展示页面。</text>
+    <text>可以添加 VR 相关的功能和内容。</text>
+  </view>
+</view>
+

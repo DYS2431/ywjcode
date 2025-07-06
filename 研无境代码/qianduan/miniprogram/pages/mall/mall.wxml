@@ -1,0 +1,21 @@
+<!--pages/mall/mall.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <input type="text" placeholder="搜索化学实验..." bindinput="onSearchInput" />
+    <button bindtap="performSearch">搜索</button>
+  </view>
+
+  <!-- 实验列表 -->
+  <view class="experiment-list">
+    <view class="experiment-item" wx:for="{{filteredExperiments}}" wx:key="id">
+      <view class="experiment-content">
+        <text class="experiment-name">{{item.name}}</text>
+        <text class="experiment-category">{{item.category}}</text>
+      </view>
+      <view class="experiment-actions">
+        <button bindtap="viewDetails" data-id="{{item._id}}">查看详情</button>
+      </view>
+    </view>
+  </view>
+</view>
